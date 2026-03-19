@@ -30,6 +30,10 @@ The workflow is a chat-style RAG pipeline built in N8N with these pieces:
 
 **Flow:** User sends a message → N8N chat trigger receives it → The AI agent uses the Supabase vector store as a tool to look up resume content → The agent (GPT-4o-mini) answers using that context and chat memory → Response is sent back to the user.
 
+### Workflow Screenshot
+
+![N8N RAG workflow](images/Workflow.png)
+
 You need to **ingest your resume** into Supabase (e.g. chunk and embed it, then insert into the vector store) separately; this workflow assumes that data is already in the `documents` table.
 
 ---
